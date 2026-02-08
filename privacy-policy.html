@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - HeightTracker</title>
+    <title>Privacy Policy - Sprout (HeightTracker)</title>
     <style>
         :root {
             --primary-color: #4A90A4;
@@ -96,97 +96,165 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to HeightTracker</a>
+        <a href="index.html" class="back-link">&larr; Back to Sprout</a>
 
-        <h1>Privacy Policy for HeightTracker</h1>
-        <p class="updated"><strong>Last Updated:</strong> February 5, 2026</p>
+        <h1>Privacy Policy for Sprout (HeightTracker)</h1>
+        <p class="updated"><strong>Last Updated:</strong> February 7, 2026</p>
 
         <h2>Overview</h2>
-        <p>HeightTracker ("the App") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application.</p>
+        <p>Sprout, also known as HeightTracker ("the App"), is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application. The App is designed as a privacy-first tool &mdash; all data stays on your device.</p>
 
         <h2>Data Collection and Storage</h2>
 
         <h3>What We Collect</h3>
-        <p>HeightTracker collects and stores the following information that you provide:</p>
+        <p>The App collects and stores only the information that you provide directly:</p>
         <ul>
-            <li>Child profiles (names, birth dates, biological sex)</li>
-            <li>Height measurements and dates</li>
-            <li>Photos you choose to attach to measurements</li>
-            <li>Parent height information (for prediction features)</li>
-            <li>Reminder preferences</li>
+            <li><strong>Child profiles:</strong> Names, birth dates, and biological sex</li>
+            <li><strong>Height measurements:</strong> Height values, dates, and optional notes</li>
+            <li><strong>Photos:</strong> Profile photos and measurement milestone photos you choose to attach</li>
+            <li><strong>Parent heights:</strong> Mother's and father's heights (for adult height prediction features)</li>
+            <li><strong>Preferences:</strong> Height unit preference (metric/imperial), appearance setting (light/dark/system), and reminder preferences</li>
         </ul>
 
         <h3>Where Data is Stored</h3>
-        <p><strong>All data is stored locally on your device.</strong> HeightTracker does not transmit any personal information to external servers. Your children's data never leaves your device.</p>
+        <p><strong>All data is stored locally on your device.</strong> The App does not transmit any personal information to external servers. Your children's data never leaves your device.</p>
         <ul>
-            <li>Data is stored using Apple's SwiftData framework</li>
-            <li>Photos are stored locally in the app's secure container</li>
-            <li>No cloud sync or backup to third-party servers</li>
+            <li><strong>App data</strong> (child profiles, measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
+            <li><strong>Photos</strong> are compressed and stored locally within the app's data</li>
+            <li><strong>Preferences</strong> (unit system, appearance, reminder settings) are stored in the app's UserDefaults</li>
+            <li><strong>Sensitive configuration</strong> is stored in the iOS Keychain with device-only access</li>
+            <li>There is no cloud sync or backup to third-party servers</li>
         </ul>
 
         <h2>Data Security</h2>
         <p>We take the security of your data seriously:</p>
         <ul>
-            <li>All data remains on your device</li>
-            <li>The app uses iOS file protection for secure storage</li>
+            <li>All data remains on your device and is never transmitted externally</li>
+            <li>The app uses iOS file protection (complete protection) for stored data and backups</li>
+            <li>Sensitive preferences are stored in the iOS Keychain with "when unlocked, this device only" access</li>
             <li>No network connections are made to transmit personal data</li>
-            <li>No analytics or tracking services are used</li>
+            <li>No analytics, crash reporting, or tracking services are used</li>
+            <li>In-memory image caches are automatically cleared when the app goes to the background</li>
         </ul>
 
         <h2>Camera and Photo Library Access</h2>
         <p>The App requests access to:</p>
         <ul>
-            <li><strong>Camera:</strong> To capture photos of your child for measurements (optional)</li>
-            <li><strong>Photo Library:</strong> To select existing photos (optional)</li>
+            <li><strong>Camera:</strong> To capture milestone photos when recording height measurements (optional)</li>
+            <li><strong>Photo Library:</strong> To select existing photos to attach to measurements (optional)</li>
         </ul>
-        <p>These permissions are only used when you choose to add photos. Photos are stored locally and are never uploaded to any server.</p>
+        <p>These permissions are only requested when you choose to add photos. Photos are stored locally and are never uploaded to any server.</p>
+
+        <h3>Photo Privacy Protection</h3>
+        <p>The App takes extra steps to protect your photo privacy:</p>
+        <ul>
+            <li><strong>Metadata stripping:</strong> All location (GPS), device, and EXIF metadata is automatically removed from photos when they are imported into the App. Only image orientation data is preserved for correct display.</li>
+            <li><strong>Compression:</strong> Photos are compressed to JPEG format (0.7 quality) and scaled down to a maximum of 2048&times;2048 pixels to minimize storage while maintaining quality</li>
+            <li><strong>No write-back:</strong> The App does not save or modify photos in your device's photo library</li>
+        </ul>
+
+        <h2>AR Height Measurement</h2>
+        <p>The App includes an optional augmented reality (AR) height measurement feature:</p>
+        <ul>
+            <li>Uses Apple's ARKit framework and the device camera to measure height in real time</li>
+            <li>Works best on devices with a LiDAR sensor but is available on compatible devices without one</li>
+            <li>Uses Apple's Vision framework for human body pose detection during measurement</li>
+            <li><strong>No AR data is recorded or stored</strong> &mdash; only the final height measurement value is saved</li>
+            <li>Camera frames used during AR sessions are processed in real time and are not captured, stored, or transmitted</li>
+        </ul>
+
+        <h2>Backup and Restore</h2>
+        <p>The App provides a local backup and restore feature:</p>
+        <ul>
+            <li>Backups are saved as <code>.sproutbackup</code> files containing your children's data, measurements, photos, and preferences</li>
+            <li>Backup files are created locally and shared using the iOS share sheet &mdash; you choose where to save them</li>
+            <li>Backup files use iOS complete file protection encryption</li>
+            <li>No backup data is sent to the developer or any third-party service</li>
+            <li>Restoring from a backup replaces all existing data in the App</li>
+        </ul>
+
+        <h2>Export Features</h2>
+        <p>The App allows you to export your data:</p>
+        <ul>
+            <li><strong>PDF reports:</strong> Growth reports containing child information, measurements, and growth charts</li>
+            <li><strong>CSV files:</strong> Measurement data in spreadsheet format</li>
+        </ul>
+        <p>Exported files are generated locally and shared using the iOS share sheet. They are not sent to any server. Temporary export files are deleted after sharing.</p>
 
         <h2>Notifications</h2>
-        <p>If you enable reminders, the App uses local notifications to remind you to take measurements. This does not require sharing any data externally.</p>
+        <p>If you enable reminders, the App uses <strong>local notifications only</strong> to remind you to take measurements. This feature:</p>
+        <ul>
+            <li>Uses iOS local notifications (not push notifications)</li>
+            <li>Does not require any server communication</li>
+            <li>Sends generic reminder messages that do not include your child's name or personal data</li>
+            <li>Can be configured per child with weekly, monthly, or quarterly frequency</li>
+            <li>Can be disabled at any time</li>
+        </ul>
+
+        <h2>Feedback</h2>
+        <p>If you use the "Send Feedback" feature in Settings, it opens your device's email app with a pre-filled email that includes your app version, iOS version, and device model. This information is only sent if you choose to send the email. The developer does not collect this information automatically.</p>
 
         <h2>Children's Privacy</h2>
-        <p>HeightTracker is designed to help parents track their children's growth. We are committed to protecting children's privacy:</p>
+        <p>The App is designed to help parents and guardians track their children's growth. We are committed to protecting children's privacy:</p>
         <ul>
-            <li>No data is collected from children directly</li>
-            <li>All data entry is performed by the parent/guardian</li>
+            <li>No data is collected from children directly &mdash; all data entry is performed by the parent or guardian</li>
             <li>No data is shared with third parties</li>
             <li>No advertising is displayed</li>
+            <li>No social features, accounts, or online interactions exist</li>
+            <li>The App does not meet the definition of an app "directed at children" &mdash; it is a parental tool</li>
         </ul>
 
         <h2>Data Retention and Deletion</h2>
         <ul>
             <li>Your data remains on your device as long as you use the App</li>
-            <li>Deleting a child profile permanently removes all associated data</li>
-            <li>Uninstalling the App removes all stored data</li>
-            <li>You have complete control over your data at all times</li>
+            <li>You can delete individual children and their associated measurements and photos at any time</li>
+            <li>You can delete individual measurements at any time</li>
+            <li>You can use the <strong>"Reset All Data"</strong> option in Settings to permanently erase all children, measurements, and photos</li>
+            <li>Uninstalling the App removes all stored data from your device</li>
+            <li>Since no data is stored externally, there is nothing to delete from servers</li>
         </ul>
 
-        <h2>Third-Party Services</h2>
-        <p>HeightTracker does not use any third-party services that collect user data:</p>
+        <h2>Third-Party Services and Dependencies</h2>
+        <p>The App does not use any third-party services that collect user data:</p>
         <ul>
-            <li>No analytics platforms</li>
+            <li>No analytics platforms (no Firebase, Mixpanel, Amplitude, etc.)</li>
             <li>No advertising networks</li>
             <li>No social media integrations</li>
             <li>No cloud storage services</li>
+            <li>No crash reporting services</li>
+        </ul>
+        <p>The App uses one open-source library:</p>
+        <ul>
+            <li><strong>ZIPFoundation</strong> &mdash; used solely for compressing and decompressing backup files. This library does not collect, transmit, or process any user data.</li>
+        </ul>
+        <p>All other functionality is built using Apple's native frameworks (SwiftUI, SwiftData, ARKit, Vision, etc.).</p>
+
+        <h2>Apple Privacy Nutrition Label</h2>
+        <p>In accordance with Apple's App Store requirements, the App declares:</p>
+        <ul>
+            <li><strong>Data Not Linked to You:</strong> Photos/Videos (used for app functionality only)</li>
+            <li><strong>Data Not Collected:</strong> All other categories</li>
+            <li><strong>Tracking:</strong> The App does not track you across other companies' apps or websites</li>
         </ul>
 
         <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-
-        <h2>Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:heighttracker.app@gmail.com">heighttracker.app@gmail.com</a></p>
+        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the updated Privacy Policy on this page and updating the "Last Updated" date.</p>
 
         <h2>Your Rights</h2>
         <p>You have the right to:</p>
         <ul>
             <li>Access all data stored in the App</li>
             <li>Delete any or all data at any time</li>
-            <li>Export your data (via the App's export feature)</li>
+            <li>Export your data via the App's PDF and CSV export features</li>
+            <li>Create backups of your data</li>
             <li>Uninstall the App to remove all data</li>
         </ul>
 
-        <p class="disclaimer">HeightTracker is not affiliated with any healthcare providers and is intended for personal tracking purposes only. Always consult healthcare professionals for medical advice.</p>
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:heighttracker.app@gmail.com">heighttracker.app@gmail.com</a></p>
+
+        <p class="disclaimer">Sprout (HeightTracker) is not affiliated with any healthcare providers and is intended for personal tracking purposes only. Growth percentiles, predictions, and analytics are for informational and educational purposes only. Always consult qualified healthcare professionals for medical advice about your child's growth.</p>
     </div>
 </body>
 </html>
