@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Sprout (HeightTracker)</title>
+    <title>Privacy Policy - Sprout - Child Growth Tracker</title>
     <style>
         :root {
             --primary-color: #4A90A4;
@@ -98,11 +98,11 @@
     <div class="container">
         <a href="index.html" class="back-link">&larr; Back to Sprout</a>
 
-        <h1>Privacy Policy for Sprout (HeightTracker)</h1>
-        <p class="updated"><strong>Last Updated:</strong> February 7, 2026</p>
+        <h1>Privacy Policy for Sprout - Child Growth Tracker</h1>
+        <p class="updated"><strong>Last Updated:</strong> February 22, 2026</p>
 
         <h2>Overview</h2>
-        <p>Sprout, also known as HeightTracker ("the App"), is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application. The App is designed as a privacy-first tool &mdash; all data stays on your device.</p>
+        <p>Sprout - Child Growth Tracker ("the App"), is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application. The App is designed as a privacy-first tool &mdash; all data stays on your device.</p>
 
         <h2>Data Collection and Storage</h2>
 
@@ -111,20 +111,30 @@
         <ul>
             <li><strong>Child profiles:</strong> Names, birth dates, and biological sex</li>
             <li><strong>Height measurements:</strong> Height values, dates, and optional notes</li>
+            <li><strong>Weight measurements:</strong> Weight values, dates, and optional notes</li>
             <li><strong>Photos:</strong> Profile photos and measurement milestone photos you choose to attach</li>
             <li><strong>Parent heights:</strong> Mother's and father's heights (for adult height prediction features)</li>
-            <li><strong>Preferences:</strong> Height unit preference (metric/imperial), appearance setting (light/dark/system), and reminder preferences</li>
+            <li><strong>Preferences:</strong> Height unit preference (metric/imperial), weight unit preference (kg/lbs), appearance setting (light/dark/system), language preference, and reminder preferences</li>
         </ul>
 
         <h3>Where Data is Stored</h3>
         <p><strong>All data is stored locally on your device.</strong> The App does not transmit any personal information to external servers. Your children's data never leaves your device.</p>
         <ul>
-            <li><strong>App data</strong> (child profiles, measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
+            <li><strong>App data</strong> (child profiles, height and weight measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
             <li><strong>Photos</strong> are compressed and stored locally within the app's data</li>
             <li><strong>Preferences</strong> (unit system, appearance, reminder settings) are stored in the app's UserDefaults</li>
             <li><strong>Sensitive configuration</strong> is stored in the iOS Keychain with device-only access</li>
             <li>There is no cloud sync or backup to third-party servers</li>
         </ul>
+
+        <h3>Home Screen Widget</h3>
+        <p>If you use the Sprout Home Screen widget, a lightweight summary of your children's data is shared between the App and the widget extension using Apple's App Group storage on your device. This includes:</p>
+        <ul>
+            <li>Child name, birth date, sex, and a small profile thumbnail</li>
+            <li>Latest height and weight measurements with dates</li>
+            <li>Growth percentile values</li>
+        </ul>
+        <p>This data never leaves your device. It is stored in a shared on-device container accessible only to the App and its widget extension.</p>
 
         <h2>Data Security</h2>
         <p>We take the security of your data seriously:</p>
@@ -140,7 +150,7 @@
         <h2>Camera and Photo Library Access</h2>
         <p>The App requests access to:</p>
         <ul>
-            <li><strong>Camera:</strong> To capture milestone photos when recording height measurements (optional)</li>
+            <li><strong>Camera:</strong> To capture milestone photos when recording measurements and for AR height measurement (optional)</li>
             <li><strong>Photo Library:</strong> To select existing photos to attach to measurements (optional)</li>
         </ul>
         <p>These permissions are only requested when you choose to add photos. Photos are stored locally and are never uploaded to any server.</p>
@@ -223,11 +233,23 @@
             <li>No cloud storage services</li>
             <li>No crash reporting services</li>
         </ul>
+
+        <h3>In-App Purchases</h3>
+        <p>The App offers an optional Sprout Pro subscription via Apple's App Store. Purchase validation is handled entirely by Apple's StoreKit framework. When you make a purchase:</p>
+        <ul>
+            <li>Transaction data (product ID, purchase receipt) is processed by Apple &mdash; not by the developer</li>
+            <li>The App communicates only with Apple's servers for purchase verification</li>
+            <li>No personal data is sent to the developer as part of the purchase process</li>
+            <li>Your Pro subscription status is cached locally on your device</li>
+        </ul>
+        <p>For details on how Apple handles your purchase data, see <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
+
+        <h3>Open-Source Libraries</h3>
         <p>The App uses one open-source library:</p>
         <ul>
             <li><strong>ZIPFoundation</strong> &mdash; used solely for compressing and decompressing backup files. This library does not collect, transmit, or process any user data.</li>
         </ul>
-        <p>All other functionality is built using Apple's native frameworks (SwiftUI, SwiftData, ARKit, Vision, etc.).</p>
+        <p>All other functionality is built using Apple's native frameworks (SwiftUI, SwiftData, StoreKit, ARKit, Vision, etc.).</p>
 
         <h2>Apple Privacy Nutrition Label</h2>
         <p>In accordance with Apple's App Store requirements, the App declares:</p>
@@ -254,7 +276,7 @@
         <p>If you have any questions about this Privacy Policy, please contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:heighttracker.app@gmail.com">heighttracker.app@gmail.com</a></p>
 
-        <p class="disclaimer">Sprout (HeightTracker) is not affiliated with any healthcare providers and is intended for personal tracking purposes only. Growth percentiles, predictions, and analytics are for informational and educational purposes only. Always consult qualified healthcare professionals for medical advice about your child's growth.</p>
+        <p class="disclaimer">Sprout - Child Growth Tracker is not affiliated with any healthcare providers and is intended for personal tracking purposes only. Growth percentiles, predictions, and analytics are for informational and educational purposes only. Always consult qualified healthcare professionals for medical advice about your child's growth.</p>
     </div>
 </body>
 </html>
