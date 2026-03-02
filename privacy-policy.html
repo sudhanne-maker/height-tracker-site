@@ -99,7 +99,7 @@
         <a href="index.html" class="back-link">&larr; Back to Sprout</a>
 
         <h1>Privacy Policy for Sprout - Child Growth Tracker</h1>
-        <p class="updated"><strong>Last Updated:</strong> February 22, 2026</p>
+        <p class="updated"><strong>Last Updated:</strong> March 1, 2026</p>
 
         <h2>Overview</h2>
         <p>Sprout - Child Growth Tracker ("the App"), is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our iOS application. The App is designed as a privacy-first tool &mdash; all data stays on your device.</p>
@@ -118,13 +118,13 @@
         </ul>
 
         <h3>Where Data is Stored</h3>
-        <p><strong>All data is stored locally on your device.</strong> The App does not transmit any personal information to external servers. Your children's data never leaves your device.</p>
+        <p><strong>By default, all data is stored locally on your device.</strong> The App does not transmit any personal information to third-party servers.</p>
         <ul>
             <li><strong>App data</strong> (child profiles, height and weight measurements) is stored using Apple's SwiftData framework in the app's secure container</li>
             <li><strong>Photos</strong> are compressed and stored locally within the app's data</li>
             <li><strong>Preferences</strong> (unit system, appearance, reminder settings) are stored in the app's UserDefaults</li>
             <li><strong>Sensitive configuration</strong> is stored in the iOS Keychain with device-only access</li>
-            <li>There is no cloud sync or backup to third-party servers</li>
+            <li>No data is sent to third-party servers. If you enable iCloud Sync (see below), data is synced via Apple's CloudKit infrastructure</li>
         </ul>
 
         <h3>Home Screen Widget</h3>
@@ -136,13 +136,26 @@
         </ul>
         <p>This data never leaves your device. It is stored in a shared on-device container accessible only to the App and its widget extension.</p>
 
+        <h2>iCloud Sync (Optional, Pro Feature)</h2>
+        <p>Sprout Pro subscribers can optionally enable <strong>iCloud Sync</strong> to synchronize their data across multiple Apple devices signed into the same iCloud account. When enabled:</p>
+        <ul>
+            <li>Child profiles, height and weight measurements, and associated data are synced via <strong>Apple's CloudKit</strong> framework</li>
+            <li>User preferences (height unit, weight unit, appearance) are synced via Apple's <strong>iCloud Key-Value Store (NSUbiquitousKeyValueStore)</strong></li>
+            <li>Data is transmitted and stored using Apple's iCloud infrastructure &mdash; the developer does not operate any servers and has no access to your iCloud data</li>
+            <li>iCloud data is encrypted in transit and at rest by Apple</li>
+            <li>Sync can be disabled at any time in the App's Settings. Disabling sync stops new data from being uploaded but does not delete data already in iCloud</li>
+            <li>To delete iCloud data, you can manage your iCloud storage through iOS Settings &gt; [Your Name] &gt; iCloud &gt; Manage Storage</li>
+        </ul>
+        <p>If iCloud Sync is not enabled (or if you are a free user), <strong>no data leaves your device</strong> and the App behaves as a fully offline, local-only application.</p>
+        <p>For details on how Apple handles iCloud data, see <a href="https://support.apple.com/en-us/102651">Apple's iCloud security overview</a>.</p>
+
         <h2>Data Security</h2>
         <p>We take the security of your data seriously:</p>
         <ul>
-            <li>All data remains on your device and is never transmitted externally</li>
+            <li>All data remains on your device unless you explicitly enable iCloud Sync</li>
             <li>The app uses iOS file protection (complete protection) for stored data and backups</li>
             <li>Sensitive preferences are stored in the iOS Keychain with "when unlocked, this device only" access</li>
-            <li>No network connections are made to transmit personal data</li>
+            <li>If iCloud Sync is enabled, data is encrypted in transit and at rest by Apple's CloudKit infrastructure</li>
             <li>No analytics, crash reporting, or tracking services are used</li>
             <li>In-memory image caches are automatically cleared when the app goes to the background</li>
         </ul>
@@ -219,9 +232,9 @@
             <li>Your data remains on your device as long as you use the App</li>
             <li>You can delete individual children and their associated measurements and photos at any time</li>
             <li>You can delete individual measurements at any time</li>
-            <li>You can use the <strong>"Reset All Data"</strong> option in Settings to permanently erase all children, measurements, and photos</li>
+            <li>You can use the <strong>"Reset All Data"</strong> option in Settings to permanently erase all children, measurements, and photos from your device</li>
             <li>Uninstalling the App removes all stored data from your device</li>
-            <li>Since no data is stored externally, there is nothing to delete from servers</li>
+            <li>If iCloud Sync is enabled, deletions are synced to iCloud and other devices. To fully remove iCloud data, manage your iCloud storage through iOS Settings</li>
         </ul>
 
         <h2>Third-Party Services and Dependencies</h2>
@@ -230,7 +243,7 @@
             <li>No analytics platforms (no Firebase, Mixpanel, Amplitude, etc.)</li>
             <li>No advertising networks</li>
             <li>No social media integrations</li>
-            <li>No cloud storage services</li>
+            <li>No third-party cloud storage services (iCloud Sync uses Apple's first-party CloudKit infrastructure only)</li>
             <li>No crash reporting services</li>
         </ul>
 
@@ -254,6 +267,7 @@
         <h2>Apple Privacy Nutrition Label</h2>
         <p>In accordance with Apple's App Store requirements, the App declares:</p>
         <ul>
+            <li><strong>Data Linked to You (if iCloud Sync enabled):</strong> Health &amp; Fitness data (child height and weight measurements) is linked to your iCloud account for sync purposes</li>
             <li><strong>Data Not Linked to You:</strong> Photos/Videos (used for app functionality only)</li>
             <li><strong>Data Not Collected:</strong> All other categories</li>
             <li><strong>Tracking:</strong> The App does not track you across other companies' apps or websites</li>
